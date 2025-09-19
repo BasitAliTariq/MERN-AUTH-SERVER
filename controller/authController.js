@@ -324,10 +324,15 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import UserModel from "../models/userModel.js";
 import transporter from "../config/nodemailer.js";
+// import {
+//   EMAIL_VERIFY_TEMPLATE,
+//   PASSWORD_RESET_TEMPLATE,
+// } from "../config/emailTemplates.js";
+
 import {
   EMAIL_VERIFY_TEMPLATE,
   PASSWORD_RESET_TEMPLATE,
-} from "../config/emailTemplates.js";
+} from "../config/emailtemplate.js";
 
 export async function register(req, res) {
   const { email, password, name } = req.body;
