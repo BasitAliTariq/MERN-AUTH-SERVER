@@ -359,7 +359,7 @@ export async function register(req, res) {
     const emailOptions = {
       from: process.env.SENDER_EMAIL,
       to: email,
-      subject: "Welcome to Hassaan's Website",
+      subject: "Welcome to Basit Ali Tariq's Website",
       text: `Welcome to our website. Your account has been created with email id : ${email}`,
     };
     await transporter.sendMail(emailOptions);
