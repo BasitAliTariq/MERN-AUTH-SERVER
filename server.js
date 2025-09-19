@@ -50,7 +50,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://mern-auth-hassaan.vercel.app"],
+    origin: ["http://localhost:5173", "https://mern-auth-123.netlify.app"],
     methods: ["POST", "PUT", "GET", "DELETE", "CREATE"],
     credentials: true,
   })
