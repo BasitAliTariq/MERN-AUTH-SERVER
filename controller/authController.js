@@ -73,6 +73,7 @@ export const login = async (req, res) => {
   }
 
   try {
+    console.log("Login API hit");
     // find user's email in database
     const user = await userModel.findOne({ email });
 
