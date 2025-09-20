@@ -356,13 +356,14 @@ export async function register(req, res) {
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
-    const emailOptions = {
+    const mailOptions = {
       from: process.env.SENDER_EMAIL,
       to: email,
-      subject: "Welcome to Basit Ali Tariq's Website",
-      text: `Welcome to our website. Your account has been created with email id : ${email}`,
+      subject: "Welcome to Basit Ali Tariq's Auth App",
+      text: `Welcome to  my authentication website.Your account has been created with email id :${email}`,
     };
-    await transporter.sendMail(emailOptions);
+
+    await transporter.sendMail(mailOptions);
 
     return res.json({ success: true });
   } catch (err) {
