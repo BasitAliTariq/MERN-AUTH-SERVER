@@ -43,7 +43,7 @@ async function userAuth(req, res, next) {
   try {
     const tokenDecode = jwt.verify(token, process.env.JWT_SECRET);
     if (tokenDecode.id) {
-      req.body = { userId: tokenDecode.id };
+      req.body = { ...req.body, userId: tokenDecode.id }; // merge safely
     } else
       return res.json({
         success: false,
