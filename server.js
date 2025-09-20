@@ -12,7 +12,7 @@ connectDB();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://mern-auth-123.netlify.app",
+  "https://authentication12345.netlify.app",
 ];
 
 app.use(express.json());
